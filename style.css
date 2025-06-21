@@ -1,1 +1,112 @@
+/* 🌍 GLOBAL STYLES */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #f4f4f4;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/4/48/Registan_Samarkand.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: brightness(0.3);
+}
 
+/* 🌐 LANGUAGE SWITCHER */
+#languageSwitcher {
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+  background-color: #1b2e1f;
+  color: gold;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  transition: 0.3s ease;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#languageSwitcher:hover {
+  background-color: #264d2c;
+  color: white;
+}
+
+label {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: gold;
+  margin-left: 20px;
+}
+
+/* 🏛️ PAGE TITLE */
+h1 {
+  text-align: center;
+  font-size: 2.8em;
+  margin-top: 20px;
+  color: gold;
+  text-shadow: 2px 2px 8px #000;
+}
+
+/* 📌 DESTINATIONS */
+.destination {
+  background-color: rgba(20, 40, 30, 0.85);
+  border: 1px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+.destination:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.destination:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.destination:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.destination:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.destination img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.destination h2 {
+  font-size: 1.6em;
+  color: gold;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.destination p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #f1f1d8;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .destination {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+}
