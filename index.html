@@ -1,4 +1,467 @@
-Though most of the structure was destroyed, the underground portion of the sextant remains, representing medieval Islamic astronomy's greatest achievements. Ulugh Beg's star catalog, compiled here, was the most accurate of its time."
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samarkand Travel - Discover Ancient Uzbekistan</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      color: #2c3e50;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 177, 153, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(120, 182, 185, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Uzbek Ornamental Background Pattern */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 20px,
+          rgba(255, 255, 255, 0.03) 20px,
+          rgba(255, 255, 255, 0.03) 40px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 20px,
+          rgba(255, 255, 255, 0.03) 20px,
+          rgba(255, 255, 255, 0.03) 40px
+        );
+      z-index: -1;
+      animation: backgroundMove 20s ease-in-out infinite;
+    }
+
+    /* Floating Ornamental Elements */
+    .ornament {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    .ornament:nth-child(1) {
+      top: 10%;
+      left: 10%;
+      animation-delay: -1s;
+    }
+
+    .ornament:nth-child(2) {
+      top: 20%;
+      right: 15%;
+      animation-delay: -3s;
+      animation-duration: 8s;
+    }
+
+    .ornament:nth-child(3) {
+      bottom: 30%;
+      left: 5%;
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+
+    .ornament:nth-child(4) {
+      bottom: 15%;
+      right: 10%;
+      animation-delay: -4s;
+    }
+
+    @keyframes backgroundMove {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+    }
+
+    @keyframes float {
+      0%, 100% { 
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.3;
+      }
+      50% { 
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.6;
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 
+        0 8px 32px rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .language-switcher {
+      margin-bottom: 25px;
+    }
+
+    .language-switcher label {
+      color: white;
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .language-switcher select {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .language-switcher select:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      color: white;
+      font-size: 3.5em;
+      margin: 25px 0;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      font-style: italic;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .destination {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 25px;
+      margin: 40px 0;
+      overflow: hidden;
+      box-shadow: 
+        0 15px 35px rgba(0,0,0,0.1),
+        0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .destination:nth-child(2) { animation-delay: 0.1s; }
+    .destination:nth-child(3) { animation-delay: 0.2s; }
+    .destination:nth-child(4) { animation-delay: 0.3s; }
+    .destination:nth-child(5) { animation-delay: 0.4s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .destination:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 
+        0 25px 50px rgba(0,0,0,0.15),
+        0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .destination-content {
+      padding: 40px;
+    }
+
+    .destination h2 {
+      color: #2c3e50;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      border-bottom: 4px solid transparent;
+      background: linear-gradient(90deg, #3498db, #9b59b6, #e74c3c);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-bottom: 15px;
+      position: relative;
+      font-weight: bold;
+    }
+
+    .destination h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #3498db, #9b59b6, #e74c3c);
+      transition: width 0.8s ease;
+    }
+
+    .destination:hover h2::after {
+      width: 100%;
+    }
+
+    .destination img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin: 25px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .destination img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    .destination p {
+      font-size: 1.2em;
+      color: #34495e;
+      margin: 20px 0;
+      text-align: justify;
+      line-height: 1.9;
+      text-indent: 30px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .stat-item {
+      background: linear-gradient(135deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid rgba(52, 152, 219, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(52, 152, 219, 0.15);
+    }
+
+    .stat-number {
+      font-size: 2em;
+      font-weight: bold;
+      color: #3498db;
+      display: block;
+    }
+
+    .stat-label {
+      color: #7f8c8d;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      h1 {
+        font-size: 2.5em;
+      }
+      
+      .destination h2 {
+        font-size: 2em;
+      }
+      
+      .destination img {
+        height: 300px;
+      }
+      
+      .destination-content {
+        padding: 25px;
+      }
+      
+      .destination p {
+        font-size: 1.1em;
+      }
+    }
+
+    .loading {
+      text-align: center;
+      color: white;
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
+    /* Scroll Animation */
+    .destination {
+      will-change: transform;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating Ornamental Elements -->
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="language-switcher">
+        <label for="languageSwitcher">🌐 Language:</label>
+        <select id="languageSwitcher">
+          <option value="en">English</option>
+          <option value="uz">O'zbekcha</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <h1 data-i18n="title">Discover Samarkand</h1>
+      <p class="subtitle" data-i18n="subtitle">Journey through the Pearl of the Silk Road</p>
+    </div>
+
+    <!-- Destination 1: Registan Square -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="registan">Registan Square</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Registan_Square%2C_Samarkand_%284%29.jpg/1200px-Registan_Square%2C_Samarkand_%284%29.jpg" alt="Registan Square" />
+        <p data-i18n="desc_registan">The magnificent Registan Square is the heart of ancient Samarkand, featuring three stunning madrasas from the 15th-17th centuries. This architectural ensemble showcases the finest examples of Islamic art and represents the golden age of the Timurid empire. The square is surrounded by Ulugh Beg Madrasah (1417-1420), Sher-Dor Madrasah (1619-1636), and Tilya-Kori Madrasah (1646-1660), each adorned with intricate tilework and majestic portals.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">600+</span>
+            <span class="stat-label">Years Old</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Historic Madrasas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination 2: Bibi-Khanym Mosque -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="bibi">Bibi-Khanym Mosque</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Bibi-Khanym_Mosque%2C_Samarkand.jpg/1200px-Bibi-Khanym_Mosque%2C_Samarkand.jpg" alt="Bibi-Khanym Mosque" />
+        <p data-i18n="desc_bibi">One of the largest mosques in the Islamic world, Bibi-Khanym was built by Timur (Tamerlane) in the early 15th century. Named after his beloved wife, this architectural marvel once stood as a symbol of Timur's power and devotion. The mosque complex includes the main mosque, two smaller mosques, and a madrasah. Despite earthquake damage over centuries, restoration efforts have revived much of its former grandeur, with its massive dome and towering minarets still inspiring awe.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">1404</span>
+            <span class="stat-label">Year Built</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">35m</span>
+            <span class="stat-label">Dome Height</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination 3: Shah-i-Zinda Complex -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="shahizinda">Shah-i-Zinda Complex</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Shah-i-Zinda_necropolis%2C_Samarkand%2C_Uzbekistan.jpg/1200px-Shah-i-Zinda_necropolis%2C_Samarkand%2C_Uzbekistan.jpg" alt="Shah-i-Zinda Complex" />
+        <p data-i18n="desc_shahizinda">This stunning necropolis, known as the "Living King," is a sacred pilgrimage site containing the tomb of Qusam ibn Abbas, cousin of Prophet Muhammad. The complex features a magnificent collection of mausoleums built between the 11th and 15th centuries, renowned for their brilliant blue ceramic tilework. Walking up the narrow street between the mausoleums is like stepping through a corridor of Islamic art history, with each structure displaying unique architectural details and spiritual significance.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">20+</span>
+            <span class="stat-label">Mausoleums</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Years of History</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination 4: Ulugh Beg Observatory -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="observatory">Ulugh Beg Observatory</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Ulugbek_observatory_Samarkand_2007.jpg/1200px-Ulugbek_observatory_Samarkand_2007.jpg" alt="Ulugh Beg Observatory" />
+        <p data-i18n="desc_observatory">Built in the 1420s by Ulugh Beg, grandson of Timur and a renowned astronomer-king, this observatory was one of the finest in the Islamic world. The main instrument was a massive marble sextant, 40 meters in radius, used to observe stellar positions with remarkable accuracy. Though most of the structure was destroyed, the underground portion of the sextant remains, representing medieval Islamic astronomy's greatest achievements. Ulugh Beg's star catalog, compiled here, was the most accurate of its time.</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">1428</span>
+            <span class="stat-label">Year Built</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">40m</span>
+            <span class="stat-label">Sextant Radius</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simple internationalization
+    const translations = {
+      en: {
+        title: "Discover Samarkand",
+        subtitle: "Journey through the Pearl of the Silk Road",
+        registan: "Registan Square",
+        desc_registan: "The magnificent Registan Square is the heart of ancient Samarkand, featuring three stunning madrasas from the 15th-17th centuries. This architectural ensemble showcases the finest examples of Islamic art and represents the golden age of the Timurid empire. The square is surrounded by Ulugh Beg Madrasah (1417-1420), Sher-Dor Madrasah (1619-1636), and Tilya-Kori Madrasah (1646-1660), each adorned with intricate tilework and majestic portals.",
+        bibi: "Bibi-Khanym Mosque",
+        desc_bibi: "One of the largest mosques in the Islamic world, Bibi-Khanym was built by Timur (Tamerlane) in the early 15th century. Named after his beloved wife, this architectural marvel once stood as a symbol of Timur's power and devotion. The mosque complex includes the main mosque, two smaller mosques, and a madrasah. Despite earthquake damage over centuries, restoration efforts have revived much of its former grandeur, with its massive dome and towering minarets still inspiring awe.",
+        shahizinda: "Shah-i-Zinda Complex",
+        desc_shahizinda: "This stunning necropolis, known as the 'Living King,' is a sacred pilgrimage site containing the tomb of Qusam ibn Abbas, cousin of Prophet Muhammad. The complex features a magnificent collection of mausoleums built between the 11th and 15th centuries, renowned for their brilliant blue ceramic tilework. Walking up the narrow street between the mausoleums is like stepping through a corridor of Islamic art history, with each structure displaying unique architectural details and spiritual significance.",
+        observatory: "Ulugh Beg Observatory",
+        desc_observatory: "Built in the 1420s by Ulugh Beg, grandson of Timur and a renowned astronomer-king, this observatory was one of the finest in the Islamic world. The main instrument was a massive marble sextant, 40 meters in radius, used to observe stellar positions with remarkable accuracy. Though most of the structure was destroyed, the underground portion of the sextant remains, representing medieval Islamic astronomy's greatest achievements. Ulugh Beg's star catalog, compiled here, was the most accurate of its time."
       },
       uz: {
         title: "Samarqandni kashf eting",
@@ -6,7 +469,7 @@ Though most of the structure was destroyed, the underground portion of the sexta
         registan: "Registon maydoni",
         desc_registan: "Ulug'vor Registon maydoni qadimiy Samarqandning markazidir, bu yerda XV-XVII asrlardagi uchta ajoyib madrasa joylashgan. Bu me'moriy ansambli islom san'atining eng zo'r namunalarini namoyish etadi va Temuriylar davlatining oltin asrini ifodalaydi.",
         bibi: "Bibi-Xonim masjidi",
-        desc_bibi: "Islom olamidagi eng katta masjidlardan biri bo'lgan Bibi-Xonim XV asr boshida Temur (Amir Temur) tomonidan qurilgan. Uning sevimli xotini nomi bilan atalgan bu me'moriy mo''jiza Temurning qudrati va sadoqatining ramzi edi.",
+        desc_bibi: "Islom olamidagi eng katta masjidlardan biri bo'lgan Bibi-Xonim XV asr boshida Temur (Amir Temur) tomonidan qurilgan. Uning sevimli xotini nomi bilan atalgan bu me'moriy mo'jiza Temurning qudrati va sadoqatining ramzi edi.",
         shahizinda: "Shohizinda majmuasi",
         desc_shahizinda: "'Tirik shoh' deb nomlanuvchi bu ajoyib qabristonlar majmuasi Payg'ambar Muhammadning amakivachisi Qusam ibn Abbos qabri joylashgan muqaddas ziyoratgohdir. Majmua XI-XV asrlarda qurilgan ajoyib maqbaralar to'plamini o'z ichiga oladi.",
         observatory: "Ulug'bek rasadxonasi",
