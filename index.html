@@ -1,59 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Samarkand Travel</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Language Switcher -->
-  <div>
-    <label for="languageSwitcher">🌐 Language:</label>
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="uz">O‘zbekcha</option>
-      <option value="fr">Français</option>
-    </select>
-  </div>
+Though most of the structure was destroyed, the underground portion of the sextant remains, representing medieval Islamic astronomy's greatest achievements. Ulugh Beg's star catalog, compiled here, was the most accurate of its time."
+      },
+      uz: {
+        title: "Samarqandni kashf eting",
+        subtitle: "Ipak yo'lining marvaridiga sayohat",
+        registan: "Registon maydoni",
+        desc_registan: "Ulug'vor Registon maydoni qadimiy Samarqandning markazidir, bu yerda XV-XVII asrlardagi uchta ajoyib madrasa joylashgan. Bu me'moriy ansambli islom san'atining eng zo'r namunalarini namoyish etadi va Temuriylar davlatining oltin asrini ifodalaydi.",
+        bibi: "Bibi-Xonim masjidi",
+        desc_bibi: "Islom olamidagi eng katta masjidlardan biri bo'lgan Bibi-Xonim XV asr boshida Temur (Amir Temur) tomonidan qurilgan. Uning sevimli xotini nomi bilan atalgan bu me'moriy mo''jiza Temurning qudrati va sadoqatining ramzi edi.",
+        shahizinda: "Shohizinda majmuasi",
+        desc_shahizinda: "'Tirik shoh' deb nomlanuvchi bu ajoyib qabristonlar majmuasi Payg'ambar Muhammadning amakivachisi Qusam ibn Abbos qabri joylashgan muqaddas ziyoratgohdir. Majmua XI-XV asrlarda qurilgan ajoyib maqbaralar to'plamini o'z ichiga oladi.",
+        observatory: "Ulug'bek rasadxonasi",
+        desc_observatory: "1420-yillarda Temurning nabirasi va taniqli astronom-shoh Ulug'bek tomonidan qurilgan bu rasadxona islom olamidagi eng zo'r rasadxonalardan biri edi. Asosiy asbob 40 metr radiusli ulkan marmar sekstant edi."
+      },
+      fr: {
+        title: "Découvrir Samarcande",
+        subtitle: "Voyage à travers la Perle de la Route de la Soie",
+        registan: "Place du Registan",
+        desc_registan: "La magnifique place du Registan est le cœur de l'ancienne Samarcande, avec trois superbes madrasas des XVe-XVIIe siècles. Cet ensemble architectural présente les plus beaux exemples de l'art islamique et représente l'âge d'or de l'empire timouride.",
+        bibi: "Mosquée Bibi-Khanym",
+        desc_bibi: "L'une des plus grandes mosquées du monde islamique, Bibi-Khanym fut construite par Timur (Tamerlan) au début du XVe siècle. Nommée d'après sa bien-aimée épouse, cette merveille architecturale était un symbole du pouvoir et de la dévotion de Timur.",
+        shahizinda: "Complexe Shah-i-Zinda",
+        desc_shahizinda: "Cette magnifique nécropole, connue sous le nom de 'Roi Vivant', est un site de pèlerinage sacré contenant la tombe de Qusam ibn Abbas, cousin du prophète Mahomet. Le complexe présente une magnifique collection de mausolées construits entre les XIe et XVe siècles.",
+        observatory: "Observatoire d'Ulugh Beg",
+        desc_observatory: "Construit dans les années 1420 par Ulugh Beg, petit-fils de Timur et astronome-roi renommé, cet observatoire était l'un des plus beaux du monde islamique. L'instrument principal était un sextant en marbre massif de 40 mètres de rayon."
+      }
+    };
 
-  <!-- Page Title -->
-  <h1 data-i18n="title"></h1>
+    function updateLanguage(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+    }
 
-  <!-- Destination 1: Bibi-Khanym Mosque -->
-  <div class="destination">
-    <h2 data-i18n="bibi"></h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Bibi-Khanym_Mosque%2C_Samarkand.jpg" alt="Bibi-Khanym Mosque" />
-    <p data-i18n="desc_bibi"></p>
-    <img class="sub-image" src="https://upload.wikimedia.org/wikipedia/commons/5/58/Inner_view_of_Bibi-Khanym_Mosque%2C_Samarkand.jpg" alt="Inside Bibi-Khanym Mosque" />
-  </div>
+    document.getElementById('languageSwitcher').addEventListener('change', function() {
+      updateLanguage(this.value);
+    });
 
-  <!-- Destination 2: Shah-i-Zinda Complex -->
-  <div class="destination">
-    <h2 data-i18n="shahizinda"></h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Shah-i-Zinda_necropolis%2C_Samarkand.jpg" alt="Shah-i-Zinda Complex" />
-    <p data-i18n="desc_shahizinda"></p>
-    <img class="sub-image" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Shah-i_Zinda_Alley.jpg" alt="Shah-i-Zinda blue-tiled alley" />
-  </div>
+    // Initialize with English
+    updateLanguage('en');
 
-  <!-- Destination 3: Registan Square -->
-  <div class="destination">
-    <h2 data-i18n="registan"></h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Registan_Samarkand.jpg" alt="Registan Square" />
-    <p data-i18n="desc_registan"></p>
-    <img class="sub-image" src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Ulugh_Beg_Madrasa%2C_Registan.jpg" alt="Ulugh Beg Madrasa at Registan" />
-  </div>
+    // Smooth scroll animation observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-  <!-- Destination 4: Ulugh Beg Observatory -->
-  <div class="destination">
-    <h2 data-i18n="observatory"></h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Ulugh_Beg_observatory_in_Samarkand.jpg" alt="Ulugh Beg Observatory" />
-    <p data-i18n="desc_observatory"></p>
-    <img class="sub-image" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ulugh_Beg_Observatory_Museum.jpg" alt="Ulugh Beg Observatory Museum interior" />
-  </div>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
 
-  <!-- Load i18next -->
-  <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
-  <script src="https://unpkg.com/i18next-http-backend@1.4.1/i18nextHttpBackend.min.js"></script>
-  <script src="script.js"></script>
+    document.querySelectorAll('.destination').forEach(destination => {
+      observer.observe(destination);
+    });
+  </script>
 </body>
 </html>
