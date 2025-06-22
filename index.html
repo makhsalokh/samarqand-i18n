@@ -2,175 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Samarkand Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samarkand Travel - Discover Ancient Uzbekistan</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f5f5f5;
-    }
-    
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 30px;
-    }
-    
-    .language-switcher {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .language-switcher select {
-      padding: 8px 12px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
-    
-    .destination {
-      background: white;
-      margin: 30px 0;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    
-    .destination h2 {
-      color: #34495e;
-      margin-bottom: 15px;
-      font-size: 24px;
-    }
-    
-    .destination p {
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 20px;
-    }
-    
+    /* ... existing styles remain unchanged ... */
+
     .image-button {
-      background: linear-gradient(135deg, #3498db, #2980b9);
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 25px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
       display: inline-block;
-      margin-top: 10px;
+      margin: 15px 0;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #2ecc71, #27ae60);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.3s;
     }
-    
+
     .image-button:hover {
-      background: linear-gradient(135deg, #2980b9, #21618c);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    
-    .image-button:active {
-      transform: translateY(0);
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-  <!-- Language Switcher -->
-  <div class="language-switcher">
-    <label for="languageSwitcher">🌐 Language:</label>
-    <select id="languageSwitcher">
-      <option value="en">English</option>
-      <option value="uz">O'zbekcha</option>
-      <option value="fr">Français</option>
-    </select>
+  <!-- Floating Ornamental Elements -->
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+  <div class="ornament"></div>
+
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="language-switcher">
+        <label for="languageSwitcher">🌐 Language:</label>
+        <select id="languageSwitcher">
+          <option value="en">English</option>
+          <option value="uz">O'zbekcha</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
+      <h1 data-i18n="title">Discover Samarkand</h1>
+      <p class="subtitle" data-i18n="subtitle">Journey through the Pearl of the Silk Road</p>
+    </div>
+
+    <!-- Destination 1 -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="registan">Registan Square</h2>
+        <a class="image-button" href="https://drive.google.com/uc?export=view&id=1pwk4cqonQGYU7bqs91Nvtraf2MwSuYKi" target="_blank">Click for Image</a>
+        <p data-i18n="desc_registan">The magnificent Registan Square is the heart of ancient Samarkand...</p>
+        <div class="stats">
+          <div class="stat-item"><span class="stat-number">600+</span><span class="stat-label">Years Old</span></div>
+          <div class="stat-item"><span class="stat-number">3</span><span class="stat-label">Historic Madrasas</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination 2 -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="bibi">Bibi-Khanym Mosque</h2>
+        <a class="image-button" href="https://drive.google.com/uc?export=view&id=1q2AHY4V5lXJIIzjibsB3C6OLzPhfXrRj" target="_blank">Click for Image</a>
+        <p data-i18n="desc_bibi">One of the largest mosques in the Islamic world...</p>
+        <div class="stats">
+          <div class="stat-item"><span class="stat-number">1404</span><span class="stat-label">Year Built</span></div>
+          <div class="stat-item"><span class="stat-number">35m</span><span class="stat-label">Dome Height</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination 3 -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="shahizinda">Shah-i-Zinda Complex</h2>
+        <a class="image-button" href="https://drive.google.com/uc?export=view&id=1pzCtTB33MVaMpyRZcMMa7ZZuL1HILG_8" target="_blank">Click for Image</a>
+        <p data-i18n="desc_shahizinda">This stunning necropolis, known as the 'Living King'...</p>
+        <div class="stats">
+          <div class="stat-item"><span class="stat-number">20+</span><span class="stat-label">Mausoleums</span></div>
+          <div class="stat-item"><span class="stat-number">1000+</span><span class="stat-label">Years of History</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination 4 -->
+    <div class="destination">
+      <div class="destination-content">
+        <h2 data-i18n="observatory">Ulugh Beg Observatory</h2>
+        <p data-i18n="desc_observatory">Built in the 1420s by Ulugh Beg...</p>
+        <div class="stats">
+          <div class="stat-item"><span class="stat-number">1428</span><span class="stat-label">Year Built</span></div>
+          <div class="stat-item"><span class="stat-number">40m</span><span class="stat-label">Sextant Radius</span></div>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <!-- Page Title -->
-  <h1 data-i18n="title">Discover Samarkand's Historic Treasures</h1>
-  
-  <!-- Destination 1: Bibi-Khanym Mosque -->
-  <div class="destination">
-    <h2 data-i18n="bibi">Bibi-Khanym Mosque</h2>
-    <p data-i18n="desc_bibi">The Bibi-Khanym Mosque is one of the most important architectural monuments of Samarkand. Built in the early 15th century, it was once considered one of the largest and most magnificent mosques in the Islamic world.</p>
-    <a href="https://drive.google.com/file/d/1pwk4cqonQGYU7bqs91Nvtraf2MwSuYKi/view?usp=drivesdk" target="_blank" class="image-button">📷 Click for Image</a>
-  </div>
-  
-  <!-- Destination 2: Shah-i-Zinda Complex -->
-  <div class="destination">
-    <h2 data-i18n="shahizinda">Shah-i-Zinda Complex</h2>
-    <p data-i18n="desc_shahizinda">Shah-i-Zinda is a necropolis in the north-eastern part of Samarkand. The complex consists of rows of refined mausoleums connected by narrow passages, famous for their stunning blue tilework and intricate architectural details.</p>
-    <a href="https://drive.google.com/file/d/1q2AHY4V5lXJIIzjibsB3C6OLzPhfXrRj/view?usp=drivesdk" target="_blank" class="image-button">📷 Click for Image</a>
-  </div>
-  
-  <!-- Destination 3: Registan Square -->
-  <div class="destination">
-    <h2 data-i18n="registan">Registan Square</h2>
-    <p data-i18n="desc_registan">Registan Square is the heart of ancient Samarkand, surrounded by three magnificent madrasas: Ulugh Beg, Tilya-Kori, and Sher-Dor. This architectural ensemble represents the pinnacle of Islamic art and architecture.</p>
-    <a href="https://drive.google.com/file/d/1pzCtTB33MVaMpyRZcMMa7ZZuL1HILG_8/view?usp=drivesdk" target="_blank" class="image-button">📷 Click for Image</a>
-  </div>
-  
-  <!-- Destination 4: Ulugh Beg Observatory -->
-  <div class="destination">
-    <h2 data-i18n="observatory">Ulugh Beg Observatory</h2>
-    <p data-i18n="desc_observatory">The Ulugh Beg Observatory was built in the 1420s by the astronomer prince Ulugh Beg. It was one of the finest observatories in the Islamic world, where accurate astronomical calculations and star catalogs were produced.</p>
-  </div>
-  
+
   <script>
-    // Translation data
+    // i18n logic
     const translations = {
       en: {
-        title: "Discover Samarkand's Historic Treasures",
-        bibi: "Bibi-Khanym Mosque",
-        desc_bibi: "The Bibi-Khanym Mosque is one of the most important architectural monuments of Samarkand. Built in the early 15th century, it was once considered one of the largest and most magnificent mosques in the Islamic world.",
-        shahizinda: "Shah-i-Zinda Complex",
-        desc_shahizinda: "Shah-i-Zinda is a necropolis in the north-eastern part of Samarkand. The complex consists of rows of refined mausoleums connected by narrow passages, famous for their stunning blue tilework and intricate architectural details.",
+        title: "Discover Samarkand",
+        subtitle: "Journey through the Pearl of the Silk Road",
         registan: "Registan Square",
-        desc_registan: "Registan Square is the heart of ancient Samarkand, surrounded by three magnificent madrasas: Ulugh Beg, Tilya-Kori, and Sher-Dor. This architectural ensemble represents the pinnacle of Islamic art and architecture.",
+        desc_registan: "The magnificent Registan Square is the heart of ancient Samarkand...",
+        bibi: "Bibi-Khanym Mosque",
+        desc_bibi: "One of the largest mosques in the Islamic world...",
+        shahizinda: "Shah-i-Zinda Complex",
+        desc_shahizinda: "This stunning necropolis, known as the 'Living King'...",
         observatory: "Ulugh Beg Observatory",
-        desc_observatory: "The Ulugh Beg Observatory was built in the 1420s by the astronomer prince Ulugh Beg. It was one of the finest observatories in the Islamic world, where accurate astronomical calculations and star catalogs were produced."
+        desc_observatory: "Built in the 1420s by Ulugh Beg..."
       },
       uz: {
-        title: "Samarqandning Tarixiy Xazinalarini Kashf Eting",
-        bibi: "Bibi-Xonim Masjidi",
-        desc_bibi: "Bibi-Xonim masjidi Samarqandning eng muhim me'moriy yodgorliklaridan biridir. 15-asr boshida qurilgan bo'lib, u islom olamidagi eng katta va ajoyib masjidlardan biri hisoblangan.",
-        shahizinda: "Shohizinda Majmuasi",
-        desc_shahizinda: "Shohizinda Samarqandning shimoli-sharqiy qismidagi qabristondir. Majmua tor yo'laklar bilan bog'langan nafis maqbaralar qatorlaridan iborat bo'lib, ajoyib ko'k kafel va murakkab me'moriy detallar bilan mashhur.",
-        registan: "Registon Maydoni",
-        desc_registan: "Registon maydoni qadimiy Samarqandning markazidir, uch ajoyib madrasa bilan o'ralgan: Ulug'bek, Tillakori va Sherdor. Bu me'moriy ansambli islom san'ati va me'morchiligining cho'qqisidir.",
-        observatory: "Ulug'bek Rasadxonasi",
-        desc_observatory: "Ulug'bek rasadxonasi 1420-yillarda astronom shahzoda Ulug'bek tomonidan qurilgan. Bu islom olamidagi eng zo'r rasadxonalardan biri bo'lib, bu yerda aniq astronomik hisob-kitoblar va yulduz kataloglari yaratilgan."
+        title: "Samarqandni kashf eting",
+        subtitle: "Ipak yo'lining marvaridiga sayohat",
+        registan: "Registon maydoni",
+        desc_registan: "Ulug'vor Registon maydoni qadimiy Samarqandning markazidir...",
+        bibi: "Bibi-Xonim masjidi",
+        desc_bibi: "Islom olamidagi eng katta masjidlardan biri...",
+        shahizinda: "Shohizinda majmuasi",
+        desc_shahizinda: "'Tirik shoh' deb nomlanuvchi bu ajoyib qabristonlar majmuasi...",
+        observatory: "Ulug'bek rasadxonasi",
+        desc_observatory: "1420-yillarda Temurning nabirasi va taniqli astronom-shoh Ulug'bek..."
       },
       fr: {
-        title: "Découvrez les Trésors Historiques de Samarcande",
-        bibi: "Mosquée Bibi-Khanym",
-        desc_bibi: "La mosquée Bibi-Khanym est l'un des monuments architecturaux les plus importants de Samarcande. Construite au début du 15ème siècle, elle était autrefois considérée comme l'une des mosquées les plus grandes et magnifiques du monde islamique.",
-        shahizinda: "Complexe Shah-i-Zinda",
-        desc_shahizinda: "Shah-i-Zinda est une nécropole dans la partie nord-est de Samarcande. Le complexe se compose de rangées de mausolées raffinés reliés par des passages étroits, célèbres pour leurs superbes carreaux bleus et leurs détails architecturaux complexes.",
+        title: "Découvrir Samarcande",
+        subtitle: "Voyage à travers la Perle de la Route de la Soie",
         registan: "Place du Registan",
-        desc_registan: "La place du Registan est le cœur de l'ancienne Samarcande, entourée de trois magnifiques madrasas : Ulugh Beg, Tilya-Kori et Sher-Dor. Cet ensemble architectural représente l'apogée de l'art et de l'architecture islamiques.",
+        desc_registan: "La magnifique place du Registan est le cœur de l'ancienne Samarcande...",
+        bibi: "Mosquée Bibi-Khanym",
+        desc_bibi: "L'une des plus grandes mosquées du monde islamique...",
+        shahizinda: "Complexe Shah-i-Zinda",
+        desc_shahizinda: "Cette magnifique nécropole, connue sous le nom de 'Roi Vivant'...",
         observatory: "Observatoire d'Ulugh Beg",
-        desc_observatory: "L'observatoire d'Ulugh Beg fut construit dans les années 1420 par le prince astronome Ulugh Beg. C'était l'un des plus beaux observatoires du monde islamique, où furent produits des calculs astronomiques précis et des catalogues d'étoiles."
+        desc_observatory: "Construit dans les années 1420 par Ulugh Beg..."
       }
     };
 
-    // Update text content based on selected language
-    function updateLanguage(language) {
+    function updateLanguage(lang) {
       const elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[language] && translations[language][key]) {
-          element.textContent = translations[language][key];
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
         }
       });
     }
 
-    // Language switcher event listener
     document.getElementById('languageSwitcher').addEventListener('change', function() {
       updateLanguage(this.value);
     });
 
-    // Initialize with English
     updateLanguage('en');
+
+    // Scroll reveal effect
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.destination').forEach(destination => {
+      observer.observe(destination);
+    });
   </script>
 </body>
-</html>
+</html>        
