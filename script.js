@@ -2,16 +2,18 @@
 i18next
   .use(i18nextHttpBackend)
   .init({
-    lng: 'en', // Default language
+    lng: 'en', // default language
+    fallbackLng: 'en', // fallback if translation not found
     debug: true,
     backend: {
       loadPath: 'locales/{{lng}}/translation.json'
     }
   }, function(err, t) {
-    updateContent();
+    if (err) return console.error(err);
+    updateContent(); // Load default language
   });
 
-// Update text based on current language
+// Function to update page content
 function updateContent() {
   document.querySelectorAll('[data-i18n]').forEach(elem => {
     const key = elem.getAttribute('data-i18n');
@@ -21,5 +23,10 @@ function updateContent() {
 
 // Listen for language changes
 document.getElementById('languageSwitcher').addEventListener('change', function(e) {
-  i18next.changeLanguage(e.target.value, updateContent);
+  const selectedLang = e.target.value;
+  i18next.changeLanguage(selectedLang, (err, t) => {
+    if (err) console.error('Language change error:', err);
+    updateContent();
+  });
 });
+
